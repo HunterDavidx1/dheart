@@ -1,0 +1,163 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Character",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "className",
+    "level",
+    "evasion",
+    "armorScore",
+    "thresholds",
+    "hpMax",
+    "hpCurrent",
+    "stress",
+    "hope",
+    "experience",
+    "stats",
+    "loadout",
+    "gold",
+    "locale"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "pronouns": { "type": "string" },
+    "className": { "type": "string" },
+    "subclass": { "type": "string" },
+    "ancestry": { "type": "string" },
+    "level": { "type": "integer", "minimum": 1 },
+    "evasion": { "type": "integer", "minimum": 0 },
+    "armorScore": { "type": "integer", "minimum": 0 },
+    "thresholds": {
+      "type": "object",
+      "required": ["minor", "major", "severe"],
+      "properties": {
+        "minor": { "type": "integer", "minimum": 0 },
+        "major": { "type": "integer", "minimum": 0 },
+        "severe": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "hpMax": { "type": "integer", "minimum": 1 },
+    "hpCurrent": { "type": "integer", "minimum": 0 },
+    "stress": { "type": "integer", "minimum": 0 },
+    "hope": { "type": "integer", "minimum": 0 },
+    "experience": { "type": "integer", "minimum": 0 },
+    "stats": {
+      "type": "object",
+      "required": [
+        "agility",
+        "strength",
+        "finesse",
+        "instinct",
+        "presence",
+        "knowledge",
+        "proficiency"
+      ],
+      "properties": {
+        "agility": { "type": "integer" },
+        "strength": { "type": "integer" },
+        "finesse": { "type": "integer" },
+        "instinct": { "type": "integer" },
+        "presence": { "type": "integer" },
+        "knowledge": { "type": "integer" },
+        "proficiency": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "hopeFeat": {
+      "type": "object",
+      "required": ["name", "text"],
+      "properties": {
+        "name": { "type": "string" },
+        "text": { "type": "string" }
+      }
+    },
+    "classFeats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "text"],
+        "properties": {
+          "name": { "type": "string" },
+          "text": { "type": "string" }
+        }
+      }
+    },
+    "backgrounds": {
+      "type": "array",
+      "items": { "type": "object", "properties": { "question": { "type": "string" } } }
+    },
+    "connections": {
+      "type": "array",
+      "items": { "type": "object", "properties": { "question": { "type": "string" } } }
+    },
+    "inventory": { "type": "array", "items": { "type": "string" } },
+    "inventoryWeapons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "primaryOrSecondary", "tier", "physicalOrMagical", "trait", "range", "damage", "burden"],
+        "properties": {
+          "name": { "type": "string" },
+          "primaryOrSecondary": { "enum": ["Primary", "Secondary"] },
+          "tier": { "type": "integer", "minimum": 1 },
+          "physicalOrMagical": { "enum": ["Physical", "Magical"] },
+          "trait": { "enum": ["Agility", "Strength", "Finesse", "Instinct", "Presence", "Knowledge"] },
+          "range": { "enum": ["Melee", "Close", "Far", "Very Close", "Very Far"] },
+          "damage": { "type": "string" },
+          "burden": { "type": "string" },
+          "featName": { "type": "string" },
+          "featText": { "type": "string" },
+          "primary": { "type": "boolean" },
+          "secondary": { "type": "boolean" }
+        }
+      }
+    },
+    "loadout": {
+      "type": "object",
+      "required": ["abilityCards"],
+      "properties": {
+        "primary": { "$ref": "#/properties/inventoryWeapons/items" },
+        "secondary": { "$ref": "#/properties/inventoryWeapons/items" },
+        "activeArmor": {
+          "type": "object",
+          "required": ["name", "tier", "baseThresholds", "baseScore"],
+          "properties": {
+            "name": { "type": "string" },
+            "tier": { "type": "integer", "minimum": 1 },
+            "baseThresholds": { "type": "string" },
+            "baseScore": { "type": "integer", "minimum": 0 },
+            "featName": { "type": "string" },
+            "featText": { "type": "string" }
+          }
+        },
+        "abilityCards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "level", "domain", "type", "recall", "text"],
+            "properties": {
+              "name": { "type": "string" },
+              "level": { "type": "integer", "minimum": 1 },
+              "domain": { "type": "string" },
+              "type": { "enum": ["Spell", "Ability", "Grimoire"] },
+              "recall": { "type": "integer", "minimum": 0 },
+              "text": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "gold": {
+      "type": "object",
+      "required": ["handfuls", "bags", "chest"],
+      "properties": {
+        "handfuls": { "type": "integer", "minimum": 0 },
+        "bags": { "type": "integer", "minimum": 0 },
+        "chest": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "locale": { "enum": ["es", "en"] }
+  }
+}

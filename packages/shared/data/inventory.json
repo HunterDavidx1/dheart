@@ -1,0 +1,235 @@
+[
+    {
+      "class": "Bard",
+      "startingEquipment": {
+        "fixed": [
+          { "id": "torch", "quantity": 1 },
+          { "id": "rope", "quantity": 1, "length": "50ft" },
+          { "id": "basic_supplies", "quantity": 1 },
+          { "id": "gold", "quantity": "handful" }
+        ],
+        "choices": [
+          {
+            "id": "potion_choice",
+            "choose": 1,
+            "options": [
+              { "id": "minor_health_potion", "quantity": 1 },
+              { "id": "minor_stamina_potion", "quantity": 1 }
+            ]
+          },
+          {
+            "id": "personal_item",
+            "choose": 1,
+            "options": [
+              { "id": "romance_novel", "quantity": 1, "type": "flavor" },
+              { "id": "unopened_letter", "quantity": 1, "type": "flavor" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "class": "Druid",
+      "startingEquipment": {
+        "fixed": [
+          { "id": "torch", "quantity": 1 },
+          { "id": "rope", "quantity": 1, "length": "50ft" },
+          { "id": "basic_supplies", "quantity": 1 },
+          { "id": "gold", "quantity": "handful" }
+        ],
+        "choices": [
+          {
+            "id": "potion_choice",
+            "choose": 1,
+            "options": [
+              { "id": "minor_health_potion", "quantity": 1 },
+              { "id": "minor_stamina_potion", "quantity": 1 }
+            ]
+          },
+          {
+            "id": "natural_trinket",
+            "choose": 1,
+            "options": [
+              { "id": "bag_of_bones_and_rocks", "quantity": 1, "type": "flavor" },
+              { "id": "strange_pendant", "quantity": 1, "type": "flavor" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "class": "Guardian",
+      "startingEquipment": {
+        "fixed": [
+          { "id": "torch", "quantity": 1 },
+          { "id": "rope", "quantity": 1, "length": "50ft" },
+          { "id": "basic_supplies", "quantity": 1 },
+          { "id": "gold", "quantity": "handful" }
+        ],
+        "choices": [
+          {
+            "id": "potion_choice",
+            "choose": 1,
+            "options": [
+              { "id": "minor_health_potion", "quantity": 1 },
+              { "id": "minor_stamina_potion", "quantity": 1 }
+            ]
+          },
+          {
+            "id": "symbol_of_duty",
+            "choose": 1,
+            "options": [
+              { "id": "mentor_totem", "quantity": 1, "type": "flavor" },
+              { "id": "secret_key", "quantity": 1, "type": "flavor" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "class": "Ranger",
+      "startingEquipment": {
+        "fixed": [
+          { "id": "torch", "quantity": 1 },
+          { "id": "rope", "quantity": 1, "length": "50ft" },
+          { "id": "basic_supplies", "quantity": 1 },
+          { "id": "gold", "quantity": "handful" }
+        ],
+        "choices": [
+          {
+            "id": "potion_choice",
+            "choose": 1,
+            "options": [
+              { "id": "minor_health_potion", "quantity": 1 },
+              { "id": "minor_stamina_potion", "quantity": 1 }
+            ]
+          },
+          {
+            "id": "keepsake",
+            "choose": 1,
+            "options": [
+              { "id": "first_kill_trophy", "quantity": 1, "type": "flavor" },
+              { "id": "broken_compass", "quantity": 1, "type": "flavor" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "class": "Rogue",
+      "startingEquipment": {
+        "fixed": [
+          { "id": "torch", "quantity": 1 },
+          { "id": "rope", "quantity": 1, "length": "50ft" },
+          { "id": "basic_supplies", "quantity": 1 },
+          { "id": "gold", "quantity": "handful" }
+        ],
+        "choices": [
+          {
+            "id": "potion_choice",
+            "choose": 1,
+            "options": [
+              { "id": "minor_health_potion", "quantity": 1 },
+              { "id": "minor_stamina_potion", "quantity": 1 }
+            ]
+          },
+          {
+            "id": "tool_choice",
+            "choose": 1,
+            "options": [
+              { "id": "forgery_tools", "quantity": 1 },
+              { "id": "grappling_hook", "quantity": 1 }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "class": "Seraph",
+      "startingEquipment": {
+        "fixed": [
+          { "id": "torch", "quantity": 1 },
+          { "id": "rope", "quantity": 1, "length": "50ft" },
+          { "id": "basic_supplies", "quantity": 1 },
+          { "id": "gold", "quantity": "handful" }
+        ],
+        "choices": [
+          {
+            "id": "potion_choice",
+            "choose": 1,
+            "options": [
+              { "id": "minor_health_potion", "quantity": 1 },
+              { "id": "minor_stamina_potion", "quantity": 1 }
+            ]
+          },
+          {
+            "id": "holy_item",
+            "choose": 1,
+            "options": [
+              { "id": "bundle_of_offerings", "quantity": 1, "type": "flavor" },
+              { "id": "holy_sigil", "quantity": 1, "type": "flavor" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "class": "Sorcerer",
+      "startingEquipment": {
+        "fixed": [
+          { "id": "torch", "quantity": 1 },
+          { "id": "rope", "quantity": 1, "length": "50ft" },
+          { "id": "basic_supplies", "quantity": 1 },
+          { "id": "gold", "quantity": "handful" }
+        ],
+        "choices": [
+          {
+            "id": "potion_choice",
+            "choose": 1,
+            "options": [
+              { "id": "minor_health_potion", "quantity": 1 },
+              { "id": "minor_stamina_potion", "quantity": 1 }
+            ]
+          },
+          {
+            "id": "arcane_focus",
+            "choose": 1,
+            "options": [
+              { "id": "whispering_orb", "quantity": 1, "type": "flavor" },
+              { "id": "family_heirloom", "quantity": 1, "type": "flavor" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "class": "Warrior",
+      "startingEquipment": {
+        "fixed": [
+          { "id": "torch", "quantity": 1 },
+          { "id": "rope", "quantity": 1, "length": "50ft" },
+          { "id": "basic_supplies", "quantity": 1 },
+          { "id": "gold", "quantity": "handful" }
+        ],
+        "choices": [
+          {
+            "id": "potion_choice",
+            "choose": 1,
+            "options": [
+              { "id": "minor_health_potion", "quantity": 1 },
+              { "id": "minor_stamina_potion", "quantity": 1 }
+            ]
+          },
+          {
+            "id": "personal_item",
+            "choose": 1,
+            "options": [
+              { "id": "lover_drawing", "quantity": 1, "type": "flavor" },
+              { "id": "sharpening_stone", "quantity": 1 }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+

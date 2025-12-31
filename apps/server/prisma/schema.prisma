@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+  role         String   @default("USER")
+  rooms        Room[]   @relation("UserRooms")
+  assets       Asset[]
+}
+
+model Room {
+  id          String   @id @default(cuid())
+  name        String
+  createdAt   DateTime @default(now())
+  owner       User?    @relation("UserRooms", fields: [ownerId], references: [id])
+  ownerId     String?
+  playersJson String
+  roomAssets  RoomAsset[]
+}
+
+model Asset {
+  id        String   @id @default(cuid())
+  type      String
+  ownerId   String
+  createdAt DateTime @default(now())
+  data      String
+  owner     User     @relation(fields: [ownerId], references: [id])
+}
+
+model RoomAsset {
+  id      String @id @default(cuid())
+  roomId  String
+  type    String
+  data    String
+  room    Room   @relation(fields: [roomId], references: [id])
+}
